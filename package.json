@@ -1,0 +1,16 @@
+{
+  "name": "container-rules",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "package": "web-ext build -s . -a . -o",
+    "format": "biome format --write .",
+    "sign": "web-ext sign -s .",
+    "start": "web-ext run"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "web-ext": "8.3.0"
+  }
+}

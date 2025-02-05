@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="list.css" />
+    </head>
+    <body>
+        <section id="rules"></section>
+        <section id="form"></section>
+
+        <template id="rule-template">
+            <header class="rule-header">Container Rules</header>
+            <main class="rule-main">
+                <input
+                    type="search"
+                    class="rule-search-box"
+                    placeholder="Search container name"
+                />
+                <div class="rule-list">
+                    <div class="rule-item">
+                        <div class="rule-icon"></div>
+                        <div class="rule-name"></div>
+                        <div class="rule-count"></div>
+                    </div>
+                </div>
+            </main>
+            <footer class="rule-footer"></footer>
+        </template>
+        <template id="form-template">
+            <header class="form-header">
+                <div class="form-back">&#8592;</div>
+                <div class="form-icon"></div>
+                <div class="form-name"></div>
+            </header>
+            <main class="form-main">
+                <div class="form-list">
+                    <div class="form-item">
+                        <input type="text" />
+                        <button class="form-button-delete">-</button>
+                    </div>
+                </div>
+                <button class="form-button-add">+</button>
+            </main>
+            <footer class="form-footer"></footer>
+        </template>
+        <script src="list.js"></script>
+    </body>
+</html>

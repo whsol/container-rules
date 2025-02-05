@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+  "name": "Container rules",
+  "version": "1.0",
+
+  "description": "",
+
+  "permissions": [
+    "<all_urls>",
+    "contextualIdentities",
+    "cookies",
+    "webRequestBlocking",
+    "webRequest",
+    "tabs",
+    "storage"
+  ],
+
+  "icons": {
+    "512": "icons/icon.svg"
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "512": "icons/icon.svg"
+    },
+    "default_title": "Rules",
+    "default_popup": "popup/list.html"
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "felixpochta@gmail.com-debug",
+      "strict_min_version": "58.0"
+    }
+  }
+}

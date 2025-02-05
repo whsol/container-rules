@@ -1,0 +1,4 @@
+node_modules
+*.zip
+.amo-upload-uuid
+.DS_Store
