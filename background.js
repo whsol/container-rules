@@ -13,7 +13,7 @@ const DEFAULT_COOKIE_STORE_ID = "firefox-default";
 /**
  * @type {Rules}
  */
-const rules = {};
+let rules = {};
 
 function toContainerName(url) {
   for (const u in rules) {
@@ -76,9 +76,13 @@ async function updateRules() {
     return;
   }
 
+  rules = {};
+
   for (const rule of storage.rules) {
-    for (url of rule.urls) {
-      rules[url] = rule.name;
+    for (const url of rule.urls) {
+      if (url !== "") {
+        rules[url] = rule.name;
+      }
     }
   }
 }

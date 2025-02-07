@@ -111,7 +111,7 @@ class Rules extends EventTarget {
     for (const container in this.rules) {
       res.push({
         name: container,
-        urls: this.rules[container].urls,
+        urls: this.rules[container].urls.filter(Boolean),
       });
     }
     return res;

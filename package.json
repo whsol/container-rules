@@ -7,7 +7,7 @@
     "package": "web-ext build -s . -a . -o",
     "format": "biome format --write .",
     "sign": "web-ext sign -s .",
-    "start": "web-ext run"
+    "start": "web-ext run --devtools"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
