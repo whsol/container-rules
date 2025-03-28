@@ -226,12 +226,11 @@ class RuleForm extends EventTarget {
     this.urlTemplate = url.cloneNode(true);
     url.remove();
 
-    /** @type {HTMLElement} */
-    this.rule.urls.every((url) => {
+    for (const url of this.rule.urls) {
       const id = crypto.randomUUID();
       this.urls[id] = url;
       this.#renderLine(id, this.urls[id]);
-    });
+    }
     return this.form;
   }
 
