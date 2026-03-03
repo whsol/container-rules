@@ -87,9 +87,22 @@ async function updateRules() {
   }
 }
 
+async function handlePageClick(tab) {
+  const containers = await browser.contextualIdentities.query({});
+  // Create new tab in container
+  await browser.tabs.create({
+    url: tab.url,
+    cookieStoreId: containers[0].cookieStoreId,
+  });
+
+  // Close the old tab
+  await browser.tabs.remove(tab.id);
+}
+
 (async () => {
   await updateRules();
   browser.storage.sync.onChanged.addListener(updateRules);
+  browser.pageAction.onClicked.addListener(handlePageClick);
 
   // Listen for web requests
   browser.webRequest.onBeforeRequest.addListener(

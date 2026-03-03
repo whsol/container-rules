@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Container rules",
-  "version": "1.0.2",
+  "version": "1.0.3",
 
   "description": "",
 
@@ -25,6 +25,11 @@
     },
     "default_title": "Rules",
     "default_popup": "popup/list.html"
+  },
+  "page_action": {
+    "default_icon": "icons/a-icon.svg",
+    "show_matches": ["<all_urls>"],
+    "default_title": "Open In Proxy"
   },
 
   "background": {

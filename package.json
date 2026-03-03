@@ -1,6 +1,6 @@
 {
   "name": "container-rules",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "type": "module",
   "scripts": {
@@ -10,7 +10,7 @@
     "start": "web-ext run --devtools"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.4",
-    "web-ext": "8.3.0"
+    "@biomejs/biome": "^2.4.5",
+    "web-ext": "^9.3.0"
   }
 }
