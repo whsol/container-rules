@@ -44,7 +44,7 @@ async function toContainer(name) {
 async function onBeforeRequest(request) {
   const tab = await browser.tabs.get(request.tabId);
 
-  if (tab.cookieStoreId !== "firefox-default") {
+  if (tab.cookieStoreId !== DEFAULT_COOKIE_STORE_ID) {
     return {};
   }
 
@@ -61,6 +61,9 @@ async function onBeforeRequest(request) {
   await browser.tabs.create({
     url: request.url,
     cookieStoreId: container.cookieStoreId,
+    openerTabId: tab.id,
+    index: tab.index + 1,
+    active: tab.active,
   });
 
   // Close the old tab
